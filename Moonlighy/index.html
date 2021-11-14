@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>First Parallax Website</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Logo</a>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="stars.png" id="stars" alt="">
+        <img src="moon.png" id="moon" alt="">
+       
+        <img src="mountains_behind.png" id="mountains_behind" alt="">
+        <h2 id="text">Moon Light</h2>
+        <a href="#sec" id="btn">Explore</a>
+        <img src="mountains_front.png" id="mountains_front" alt="">
+    </section>
+    <div class="sec" id = "sec">
+        <h2>Parallax Scrolling Effects</h2>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque impedit placeat hic facilis rerum sint aut laboriosam iste laudantium natus consequuntur repudiandae quia, quasi, soluta iusto. Harum quasi quibusdam amet.
+            <br><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora placeat, enim saepe neque unde sit, dicta aliquam possimus eligendi ipsa deserunt eaque? Consectetur eligendi quasi harum voluptatum adipisci, cumque perspiciatis.
+            <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt nam, saepe et perspiciatis odio, quo voluptate impedit natus sed exercitationem dolores asperiores, officia deleniti veniam quam provident dicta at id.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum deleniti quis dignissimos inventore veritatis, voluptates culpa earum recusandae eos laudantium fugit perferendis soluta excepturi nemo assumenda blanditiis asperiores est possimus.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ipsa assumenda nemo, placeat modi consectetur! Molestiae autem illum obcaecati libero id praesentium porro, commodi cupiditate accusamus aliquam, amet veniam dignissimos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui quam rem modi quaerat ipsa doloribus animi unde distinctio! Doloribus, veritatis doloremque! A sint beatae ad maiores id rerum soluta.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, perferendis a officiis quidem ratione distinctio, mollitia, obcaecati animi vero cupiditate quaerat. Vel ullam neque maxime dolore pariatur ratione explicabo nostrum!
+            <br><br>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti tempora velit cumque enim mollitia laborum quisquam ipsum alias odio et delectus aut sit expedita asperiores debitis, ab fugit sed ex?
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus debitis hic necessitatibus illo tempora animi incidunt voluptates nemo facere, distinctio officiis id odio exercitationem enim odit! Aut maxime consequatur ducimus?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, debitis alias quae id ipsum eveniet voluptatibus, libero mollitia illum veritatis voluptatum aut commodi sapiente nam explicabo eum. Laborum, eligendi nemo!
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias quaerat architecto laborum ipsum id, officia modi temporibus ipsa ratione cum necessitatibus impedit esse error fugit veniam, magni ea. Sequi, in.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur officia fuga quas deserunt quasi quisquam molestias ea neque ratione voluptatem illum, magnam magni quae laudantium tempora eum numquam repudiandae! Sunt?
+            <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis dolorem ratione distinctio quibusdam cupiditate earum quaerat nihil adipisci delectus labore perferendis deleniti tenetur, unde facilis sequi et blanditiis pariatur ea.
+        </p>
+
+    </div>
+
+
+    <script>
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains_behind = document.getElementById('mountains_behind');
+        let mountains_front = document.getElementById('mountains_front');
+        let btn = document.getElementById('btn');
+        let text = document.getElementById('text');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            stars.style.left = value * 0.50 + 'px';
+            moon.style.top = value * 0.75 + 'px';
+            mountains_behind.style.top = value * 0.50 + 'px';
+            text.style.marginRight = value * 2.5 + 'px';
+            text.style.marginTop = value * 0.5 + 'px';
+            btn.style.marginTop = value * 0.7 + 'px';
+
+        })
+    </script>
+</body>
+</html>
